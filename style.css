@@ -1,0 +1,93 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+} 
+
+#hello {
+	color: #383838;
+	font-weight: 400;
+	font-size: 14px;
+	font-family: menlo, meslo lg, monospace;
+	position: relative;
+	left: 20%;
+	width: 60%;
+	top: 20vh;
+	text-rendering: geometricPrecision;
+	-moz-osx-font-smoothing: grayscale;	
+}
+
+#graph {
+	color: #383838;
+	font-weight: 400;
+	font-size: 14px;
+	font-family: menlo, meslo lg, monospace;
+	position: relative;
+	left: 20%;
+	width: 60%;
+	top: 20vh;
+	line-height: 1.725;
+	text-rendering: geometricPrecision;
+	-moz-osx-font-smoothing: grayscale;
+	margin-top: 3vh;
+}
+
+#months {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	height: 3vh;
+	margin-bottom: 1vh;
+}
+
+.monthlabel {
+	width: 15vh;
+	height: 3vh;
+	margin: 0.5vh;
+	line-height: 3vh;
+	text-align: center;
+}
+
+#coffee {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	height: 28vh;
+}
+
+.weeklabel {
+	width: 5vh;
+	height: 3vh;
+	margin: 0.5vh;
+	line-height: 3vh;
+}
+
+.square {
+	width: 3vh;
+	height: 3vh;
+	margin: 0.5vh;
+}
+
+#howto, #howto-label {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-end;
+	height: 4vh;
+	margin-top: 1vh;
+	justify-content: flex-end;
+}
+
+
+.maplabel {
+	width: 3vh;
+	height: 3vh;
+	margin: 0.5vh;
+	line-height: 3vh;
+	text-align: center;
+}

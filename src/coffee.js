@@ -7,8 +7,20 @@ var ht = document.getElementById("howto");
 var colourmap = ['#eaeaea', '#b3cde9', '#6497c1', '#005ba6', '#03397c', '#011f5b'];
 
 
-weekday = 1;
 
+weekday = 1; // 1st Jan was Tuesday
+
+function showComment(event) {
+	var description = document.getElementById("comment");
+	description.textContent = event.target.getAttribute("name");
+}
+
+function hideComment() {
+	var description = document.getElementById("comment");
+	description.textContent = "";
+}
+
+// Setting the shift for the first of january
 for (i = 0; i < weekday; i++) {
 	var div = document.createElement('div');
 	div.setAttribute('class', 'square');
@@ -16,13 +28,19 @@ for (i = 0; i < weekday; i++) {
 	coffee.appendChild(div);
 }
 
+// Populate with data
 for (j = 0; j < stats.length; j++) {
 	var div = document.createElement('div');
 	div.setAttribute('class', 'square');
 	div.style.backgroundColor = colourmap[stats[j][1]];
+
+	if (stats[j].length == 3) {
+		div.setAttribute("name", stats[j][2]);
+		div.onmouseover = showComment;
+		div.onmouseout = hideComment;
+	}
 	coffee.appendChild(div);
 }
-
 
 for (k = 0; k < colourmap.length; k++) {
 	var div = document.createElement('div');

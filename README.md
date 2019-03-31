@@ -1,4 +1,4 @@
-# Coffee Tracker
+# Coffee Tracker :coffee:
 
 General activity tracker grid I made to monitor my caffeine consumption throughout 2019
 

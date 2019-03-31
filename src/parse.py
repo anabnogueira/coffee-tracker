@@ -13,10 +13,10 @@ def parse(filename):
 	for line in f:
 		# no comment
 		if (len(line) <= 7):
-			el = start + "\"" + line[:2] + "/" + line[2:4] + "\"" + delim + line[5] + end
+			el = start + "'" + line[:2] + "/" + line[2:4] + "'" + delim + line[5] + end
 		# comment
 		else:
-			el = start + "\"" + line[:2] + "/" + line[2:4] + "\"" + delim + line[5] + delim + "\"" + line[9:-1] + "\"" + end
+			el = start + "'" + line[:2] + "/" + line[2:4] + "'" + delim + line[5] + delim + "'" + line[9:-1] + "'" + end
 		array += el + delim
 		i += 1
 
@@ -30,3 +30,4 @@ if __name__ == '__main__':
 		print("ERROR: Missing file name", file=sys.stderr)
 	else:
 		print("ERROR: Invalid file name", file=sys.stderr)
+
